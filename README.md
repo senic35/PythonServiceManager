@@ -21,14 +21,14 @@ PythonServiceManager is a robust and versatile Bash script designed to simplify 
 
 ## Installation
 
-1. Clone this repository or download the `manage_python_service.sh` script.
+1. Clone this repository or download the `psm.sh` script.
 2. Make the script executable:
    ```
-   chmod +x manage_python_service.sh
+   chmod +x psm.sh
    ```
 3. Optionally, move the script to a directory in your PATH for easier access:
    ```
-   sudo mv manage_python_service.sh /usr/local/bin/pythonservicemanager
+   sudo mv psm.sh /usr/local/bin/pythonservicemanager
    ```
 
 ## Usage
@@ -36,7 +36,7 @@ PythonServiceManager is a robust and versatile Bash script designed to simplify 
 The basic syntax for using PythonServiceManager is:
 
 ```
-sudo ./manage_python_service.sh <action> <script_name.py> [python_version] [venv_name]
+sudo ./psm.sh <action> <script_name.py> [python_version] [venv_name]
 ```
 
 Available actions:
@@ -55,17 +55,17 @@ Examples:
 
 1. Set up a new service:
    ```
-   sudo ./manage_python_service.sh setup my_script.py 3.9 my_venv
+   sudo ./psm.sh setup my_script.py 3.9 my_venv
    ```
 
 2. Start a service:
    ```
-   sudo ./manage_python_service.sh start my_script.py
+   sudo ./psm.sh start my_script.py
    ```
 
 3. View service logs:
    ```
-   sudo ./manage_python_service.sh logs my_script.py
+   sudo ./psm.sh logs my_script.py
    ```
 
 ## Configuration
@@ -73,7 +73,7 @@ Examples:
 PythonServiceManager uses a configuration file located at `/etc/python_service_manager.conf`. You can edit this file directly or use the `config` action:
 
 ```
-sudo ./manage_python_service.sh config
+sudo ./psm.sh config
 ```
 
 The configuration file stores settings such as the default Python version and virtual environment name.
