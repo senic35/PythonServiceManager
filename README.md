@@ -68,15 +68,17 @@ Examples:
    sudo ./psm.sh logs my_script.py
    ```
 
-## Configuration
+## Configuration Options
 
-PythonServiceManager uses a configuration file located at `/etc/python_service_manager.conf`. You can edit this file directly or use the `config` action:
+The `python_service_manager.conf` file contains various settings to customize the behavior of PythonServiceManager. Key options include:
 
-```
-sudo ./psm.sh config
-```
+- `DEFAULT_PYTHON_VERSION`: The default Python version for new services.
+- `DEFAULT_VENV_NAME`: The default name for virtual environments.
+- `LOG_DIR`: Directory for storing service logs.
+- `DEFAULT_RESTART_POLICY`: Default restart policy for services.
+- `GLOBAL_ENV_VARS`: Global environment variables for all services.
 
-The configuration file stores settings such as the default Python version and virtual environment name.
+For a complete list of options and their descriptions, please refer to the comments in the configuration file.
 
 ## Contributing
 
