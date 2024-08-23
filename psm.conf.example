@@ -1,0 +1,68 @@
+# PythonServiceManager Configuration File
+# Location: /etc/python_service_manager.conf
+
+# Default Python version to use when setting up new services
+# This should be installed on your system
+DEFAULT_PYTHON_VERSION="3.8"
+
+# Default name for virtual environments
+DEFAULT_VENV_NAME="venv"
+
+# Default user to run the services
+# Leave empty to use the user who runs the script
+DEFAULT_SERVICE_USER=""
+
+# Default group to run the services
+# Leave empty to use the group of the user who runs the script
+DEFAULT_SERVICE_GROUP=""
+
+# Directory to store logs (if not using journald)
+LOG_DIR="/var/log/python_services"
+
+# Maximum log file size in MB (for rotation)
+MAX_LOG_SIZE=10
+
+# Number of log files to keep (for rotation)
+MAX_LOG_FILES=5
+
+# Default restart policy for services
+# Options: always, on-failure, no
+DEFAULT_RESTART_POLICY="always"
+
+# Time to wait before restarting a failed service (in seconds)
+RESTART_SEC=10
+
+# Additional environment variables for all services
+# Use comma-separated KEY=VALUE pairs
+GLOBAL_ENV_VARS="PYTHONUNBUFFERED=1,SCRIPT_ENV=production"
+
+# Default dependencies for systemd service (After=)
+# Use space-separated list
+DEFAULT_DEPENDENCIES="network.target"
+
+# Enable detailed logging for the PythonServiceManager script itself
+ENABLE_SCRIPT_LOGGING=true
+
+# Script log file location
+SCRIPT_LOG_FILE="/var/log/python_service_manager.log"
+
+# Enable email notifications on service failures
+ENABLE_EMAIL_NOTIFICATIONS=false
+
+# Email address to send notifications to (if enabled)
+NOTIFICATION_EMAIL=""
+
+# SMTP server for sending email notifications
+SMTP_SERVER=""
+
+# SMTP port
+SMTP_PORT=587
+
+# SMTP username
+SMTP_USERNAME=""
+
+# SMTP password
+SMTP_PASSWORD=""
+
+# Use SSL/TLS for SMTP connection
+SMTP_USE_TLS=true
